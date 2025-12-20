@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-linear-to-r from-neutral-950 to-neutral-700">
       <body
         className={inter.className}
       >
