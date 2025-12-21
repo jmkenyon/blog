@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="h-full bg-linear-to-r from-neutral-950 to-neutral-700 text-white flex flex-col items-center p-20 relative">
+    <main className="h-full bg-linear-to-r from-neutral-950 to-neutral-700 text-white flex flex-col items-center py-20 md:px-20 sm:px-10 px-5 relative">
       <Button
-        className="absolute top-10 left-0 rounded-l-none text-black"
+        className="absolute sm:top-10 top-2 left-0 rounded-l-none text-black"
         variant={"outline"}
         asChild
       >
@@ -15,8 +15,8 @@ export default function Home() {
         </Link>
       </Button>
       <section className="flex flex-col items-center">
-        <h1 className="text-5xl font-bold">Joshua Kenyon</h1>
-        <h2 className="mt-4 text-xl text-neutral-300">
+        <h1 className="md:text-5xl sm:text-4xl text-3xl font-bold">Joshua Kenyon</h1>
+        <h2 className="mt-4 md:text-xl sm:text-base text-sm  text-neutral-300">
           Writing about startups, software, and building scalable products
         </h2>
       </section>

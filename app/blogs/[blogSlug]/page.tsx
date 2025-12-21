@@ -28,7 +28,7 @@ const Page = async ({ params }: { params: Promise<IParams> }) => {
   return (
     <main className="h-full bg-linear-to-r from-neutral-950 to-neutral-700 text-white/90 ">
       <Button
-        className="fixed top-10 left-0  rounded-l-none text-black"
+        className="fixed sm:top-8 top-2 left-0  rounded-l-none text-black"
         variant={"outline"}
         asChild
       >
@@ -36,7 +36,7 @@ const Page = async ({ params }: { params: Promise<IParams> }) => {
           Home
         </Link>
       </Button>
-      <article className="prose prose-invert mx-auto max-w-3xl py-16">
+      <article className="prose prose-invert mx-auto max-w-3xl py-20 px-5">
         <div className="flex flex-col items-center">
           <h1 className="text-3xl pb-5">{data.title}</h1>
 
@@ -48,7 +48,7 @@ const Page = async ({ params }: { params: Promise<IParams> }) => {
                 width={800}
                 height={800}
                 priority
-                className="rounded-2xl w-full h-100"
+                className="rounded-2xl w-85 h-full"
               />
             </div>
           )}
