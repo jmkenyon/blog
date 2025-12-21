@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="h-full bg-linear-to-r from-neutral-950 to-neutral-700 text-white flex flex-col items-center p-20 relative">
       <Button
-        className="absolute top-10 left-0 rounded-l-none text-black animate-bounce animation-duration-[1.5s] repeat-1"
+        className="absolute top-10 left-0 rounded-l-none text-black"
         variant={"outline"}
         asChild
       >
