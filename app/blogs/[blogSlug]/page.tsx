@@ -36,9 +36,9 @@ const Page = async ({ params }: { params: Promise<IParams> }) => {
           Home
         </Link>
       </Button>
-      <article className="prose prose-invert mx-auto max-w-3xl py-20 px-5">
+      <article className="prose prose-invert mx-auto lg:max-w-3xl md:max-w-xl sm:max-w-lg max-w-md py-20 px-5">
         <div className="flex flex-col items-center">
-          <h1 className="text-3xl pb-5">{data.title}</h1>
+          <h1 className="text-3xl text-center">{data.title}</h1>
 
           {data.image && (
             <div className=" overflow-hidden rounded-2xl  ">
