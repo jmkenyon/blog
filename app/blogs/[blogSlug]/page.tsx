@@ -26,9 +26,9 @@ const Page = async ({ params }: { params: Promise<IParams> }) => {
   const { content, data } = matter(source);
 
   return (
-    <main className="h-full bg-linear-to-r from-neutral-950 to-neutral-700 text-white/90 ">
+    <main className="h-full bg-linear-to-r from-neutral-950 to-neutral-700 text-white/90 relative">
       <Button
-        className="fixed sm:top-8 top-2 left-0  rounded-l-none text-black"
+        className="absolute md:top-10 top-2 left-0 rounded-l-none text-black"
         variant={"outline"}
         asChild
       >
