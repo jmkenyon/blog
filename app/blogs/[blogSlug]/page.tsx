@@ -29,7 +29,7 @@ export async function generateMetadata({
   const source = fs.readFileSync(filePath, "utf8");
   const { data } = matter(source);
 
-  const url = `https://joshuakenyon.dev/blogs/${params.blogSlug}`;
+  const url = `https://joshuakenyon.dev/blogs/${resolvedParams.blogSlug}`;
 
   return {
     title: `${data.title} | Joshua Kenyon`,
@@ -69,7 +69,7 @@ const Page = async ({ params }: { params: Promise<IParams> }) => {
   const { content, data } = matter(source);
 
   return (
-    <main className="h-full bg-linear-to-r from-neutral-950 to-neutral-700 text-white/90 relative">
+    <main className="h-full bg-linear-to-r from-neutral-950 to-neutral-800 text-white/90 relative">
       <Button
         className="absolute md:top-10 top-2 left-0 rounded-l-none text-black"
         variant={"outline"}
