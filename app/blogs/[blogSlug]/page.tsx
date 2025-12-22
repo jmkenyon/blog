@@ -29,7 +29,7 @@ export async function generateMetadata({
   const source = fs.readFileSync(filePath, "utf8");
   const { data } = matter(source);
 
-  const url = `https://joshuakenyon.com/blogs/${params.blogSlug}`;
+  const url = `https://joshuakenyon.dev/blogs/${params.blogSlug}`;
 
   return {
     title: `${data.title} | Joshua Kenyon`,
