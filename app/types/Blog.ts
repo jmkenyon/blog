@@ -3,5 +3,4 @@ export type Blog = {
     slug: string;
     excerpt: string;
     image: string;
-    emoji?: string
 }

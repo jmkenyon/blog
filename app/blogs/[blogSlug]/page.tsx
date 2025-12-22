@@ -5,9 +5,52 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Metadata } from "next";
 
 interface IParams {
-  blogSlug?: string;
+  blogSlug: string;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: IParams;
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+
+  const filePath = path.join(
+    process.cwd(),
+    "app",
+    "content",
+    "blogs",
+    `${resolvedParams.blogSlug}.mdx`
+  );
+
+  const source = fs.readFileSync(filePath, "utf8");
+  const { data } = matter(source);
+
+  const url = `https://yourdomain.com/blogs/${params.blogSlug}`;
+
+  return {
+    title: `${data.title} | Joshua Kenyon`,
+    description: data.excerpt,
+
+    openGraph: {
+      title: data.title,
+      description: data.excerpt,
+      url,
+      siteName: "Joshua Kenyon",
+      images: [
+        {
+          url: data.image,
+          width: 1200,
+          height: 630,
+          alt: data.title,
+        },
+      ],
+      type: "article",
+    },
+  };
 }
 
 const Page = async ({ params }: { params: Promise<IParams> }) => {
@@ -32,9 +75,7 @@ const Page = async ({ params }: { params: Promise<IParams> }) => {
         variant={"outline"}
         asChild
       >
-        <Link href="/">
-          Home
-        </Link>
+        <Link href="/">Home</Link>
       </Button>
       <article className="prose prose-invert mx-auto lg:max-w-3xl md:max-w-xl sm:max-w-lg max-w-md py-20 px-5">
         <div className="flex flex-col items-center">
