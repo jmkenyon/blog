@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Metadata } from "next";
+import Script from "next/script";
 
 interface IParams {
   blogSlug: string;
@@ -95,6 +96,10 @@ const Page = async ({ params }: { params: Promise<IParams> }) => {
           )}
         </div>
         <MDXRemote source={content} />
+        <Script
+          src="https://joshuakenyon.kit.com/b724c88fb8/index.js"
+          strategy="afterInteractive"
+        />
       </article>
     </main>
   );
