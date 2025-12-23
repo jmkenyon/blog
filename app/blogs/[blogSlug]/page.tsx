@@ -96,6 +96,10 @@ const Page = async ({ params }: { params: Promise<IParams> }) => {
           )}
         </div>
         <MDXRemote source={content} />
+        <div className="mt-16">
+          <div data-uid="b724c88fb8" />
+        </div>
+
         <Script
           src="https://joshuakenyon.kit.com/b724c88fb8/index.js"
           strategy="afterInteractive"
