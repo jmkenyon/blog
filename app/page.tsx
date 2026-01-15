@@ -228,14 +228,14 @@ export default function HomePage() {
 
           <div className="mt-8 flex justify-center gap-4">
             <a
-              href="https://calendly.com/YOUR-CALENDLY"
+              href="https://calendly.com/joshuakenyon1/30min"
               target="_blank"
               className="rounded-xl bg-white px-6 py-3 text-sm font-medium text-neutral-900 transition hover:bg-neutral-200"
             >
               Book a call
             </a>
             <a
-              href="mailto:you@joshuakenyon.dev"
+              href="mailto:joshuakenyon1@gmail.com"
               className="rounded-xl border border-neutral-800 px-6 py-3 text-sm text-neutral-300 transition hover:bg-neutral-900"
             >
               Email me
