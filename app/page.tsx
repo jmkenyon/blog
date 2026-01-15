@@ -21,8 +21,9 @@ export default function HomePage() {
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
+
             <a
-              href="https://calendly.com/YOUR-CALENDLY"
+              href="https://calendly.com/joshuakenyon1/30min"
               target="_blank"
               className="rounded-xl bg-white px-6 py-3 text-sm font-medium text-neutral-900 transition hover:bg-neutral-200"
             >
